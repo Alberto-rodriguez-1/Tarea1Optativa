@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}Inicio - CineFlask{% endblock %}
+
+{% block content %}
+<div class="hero-section bg-primary text-white rounded p-5 mb-4">
+    <div class="row align-items-center">
+        <div class="col-md-8">
+            <h1 class="display-4">¡Bienvenido a CineFlask!</h1>
+            <p class="lead">Tu portal personal de películas desarrollado con Flask</p>
+            <p>Explora nuestra colección de películas, lee reseñas y comparte tus opiniones.</p>
+            <a href="{{ url_for('movies') }}" class="btn btn-light btn-lg">
+                <i class="fas fa-video me-2"></i>Ver Películas
+            </a>
+        </div>
+        <div class="col-md-4 text-center">
+            <i class="fas fa-film fa-5x opacity-75"></i>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4 mb-3">
+        <div class="card h-100">
+            <div class="card-body text-center">
+                <i class="fas fa-star fa-3x text-warning mb-3"></i>
+                <h5 class="card-title">Catálogo de Calidad</h5>
+                <p class="card-text">Descubre películas cuidadosamente seleccionadas con información detallada.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-3">
+        <div class="card h-100">
+            <div class="card-body text-center">
+                <i class="fas fa-users fa-3x text-info mb-3"></i>
+                <h5 class="card-title">Comunidad</h5>
+                <p class="card-text">Conecta con otros cinéfilos y comparte tus reseñas y recomendaciones.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-3">
+        <div class="card h-100">
+            <div class="card-body text-center">
+                <i class="fas fa-code fa-3x text-success mb-3"></i>
+                <h5 class="card-title">Proyecto Flask</h5>
+                <p class="card-text">Desarrollado como parte del módulo de Frameworks en DAW2.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
