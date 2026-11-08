@@ -100,3 +100,16 @@ def save_contact(name, email, subject, message):
     conn.commit()
     conn.close()
     print(f"✅ Contacto guardado: {name}")
+def add_movie(title, director, year, genre, description, rating, poster_url):
+    """Inserta una película nueva en la base de datos"""
+    conn = sqlite3.connect('proyecto.db')
+    cursor = conn.cursor()
+
+    cursor.execute('''
+        INSERT INTO movies (title, director, year, genre, description, rating, poster_url)
+        VALUES (?, ?, ?, ?, ?, ?, ?)
+    ''', (title, director, year, genre, description, rating, poster_url))
+
+    conn.commit()
+    conn.close()
+    print(f"✅ Película guardada: {title}")
